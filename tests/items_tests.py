@@ -1,5 +1,19 @@
 import unittest
 from items.players import Player
+from game_methods.item_methods import spawn
+
+
+class GenerateItemTest(unittest.TestCase):
+    def test_spawn(self):
+        x = 100
+        y = 100
+        w = 1000
+        h = 1000
+        x_, y_ = spawn(x, y, w, h)
+        self.assertGreater(x_, 100, 'Image will appear off screen.')
+        self.assertLess(x_, 900, 'Image will appear off screen.')
+        self.assertGreater(y_, 100, 'Image will appear off screen.')
+        self.assertLess(y_, 900, 'Image will appear off screen.')
 
 
 class InventoryTest(unittest.TestCase):
@@ -33,5 +47,7 @@ class RiddleAnswerTest(unittest.TestCase):
         self.assertEqual(riddle_ans, True, 'This did not return the correct answer')
         self.assertEqual(player3.points, 42, 'This did not return the correct answer')
         self.assertEqual(player3.purse, 15, 'This did not return the correct answer')
+
+
 
 

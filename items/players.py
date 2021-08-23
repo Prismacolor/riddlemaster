@@ -1,6 +1,8 @@
 import os
 import pygame
 
+# TODO find image for the player!!!
+
 
 class Player:
     def __init__(self, name, x_pos, y_pos):
@@ -13,11 +15,11 @@ class Player:
         self.points = 0
         self.lives = 3
 
-    def answer_riddle(self, riddle, player_answer):
+    def answer_riddle(self, creature, riddle, riddle_answers, player_answer):
         # get player input in main game loop and use this to check it
-        if player_answer in riddle['answers']:
-            self.points += riddle['points']
-            self.purse += riddle['worth']
+        if player_answer in riddle_answers:
+            self.points += creature.points
+            self.purse += creature.worth
             return True
         else:
             self.lives -= 1

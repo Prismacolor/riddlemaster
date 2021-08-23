@@ -1,4 +1,4 @@
-# goal of game is to answer ten riddles correctly to win a prize.
+# goal of game is to answer twelve riddles correctly to win a prize.
 # player chooses a character
 # eventually we'll have a picture for each character and will show them in pygame
 # at each level the person will encounter a new creature
@@ -19,4 +19,17 @@
 # continue to next level.
 # after completing level ten, give title of riddle master
 
-# TODO need to get images for game
+
+'''
+finish functions in quest_methods and item_methods
+write tests for all methods with breakpoints
+then add riddles in appropriate format
+get game background
+get image for player
+
+start putting together main game loop
+write tests for main game loop
+trial runs
+rewrite Readme
+Finite
+'''
